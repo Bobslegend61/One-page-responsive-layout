@@ -1,0 +1,11 @@
+@mixin largeScreen {
+    @media (min-width: 700px) {
+        @content;
+    }
+}
+
+@mixin transition($property, $time) {
+    transition-duration: $time;
+    transition-timing-function: ease-in-out;
+    transition-property: $property;
+}

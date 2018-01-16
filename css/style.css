@@ -1,0 +1,292 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.4;
+  background-color: #fff; }
+
+.container, #about-us, #our-services .one-column, #contact-form div {
+  width: 95%; }
+  @media (min-width: 700px) {
+    .container, #about-us, #our-services .one-column, #contact-form div {
+      width: 85%; } }
+
+.btn {
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 1.3rem;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+  transition-property: "background-color"; }
+
+.btn-green {
+  background-color: #178A27; }
+  .btn-green:hover {
+    background-color: #1ba02d; }
+
+.btn-teal {
+  background-color: #1686C1; }
+  .btn-teal:hover {
+    background-color: #1996d8; }
+
+.btn-red {
+  background-color: #852406; }
+  .btn-red:hover {
+    background-color: #9d2b07; }
+
+.red {
+  color: #852406 !important; }
+
+.teal {
+  color: #1686c1 !important; }
+
+.read-more {
+  color: #333;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #b3b3b3; }
+  .read-more:hover {
+    background-color: #e6e6e6; }
+
+nav#desktop {
+  display: none;
+  width: 100vw;
+  padding: 15px 25%;
+  background-color: #333;
+  position: fixed; }
+  @media (min-width: 700px) {
+    nav#desktop {
+      display: block; } }
+  nav#desktop div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px; }
+    nav#desktop div a {
+      text-align: center;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 1px solid grey;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 1px;
+      transition-duration: 250ms;
+      transition-timing-function: ease-in-out;
+      transition-property: "all"; }
+    nav#desktop div a:hover {
+      background-color: #454545 !important; }
+
+#landing-page {
+  background: url("../img/bg-1.jpg") center center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 74px; }
+  @media (min-width: 1030px) {
+    #landing-page {
+      min-height: 95vh; } }
+  #landing-page div {
+    justify-self: center;
+    color: #fff;
+    align-self: center;
+    text-align: center;
+    margin: 40%; }
+    @media (min-width: 700px) {
+      #landing-page div {
+        margin: 250px auto; } }
+    #landing-page div h1 {
+      font-size: 3rem; }
+
+#about-us {
+  margin: 0 auto 0 auto; }
+  #about-us .three-columns, #about-us .two-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px; }
+    @media (min-width: 700px) {
+      #about-us .three-columns, #about-us .two-columns {
+        grid-template-columns: 1fr 1fr 1fr; } }
+    #about-us .three-columns div, #about-us .two-columns div {
+      text-align: center;
+      background-color: #f2f2f2;
+      padding: 0 2px 15px 2px;
+      color: #333; }
+      @media (min-width: 700px) {
+        #about-us .three-columns div, #about-us .two-columns div {
+          text-align: left; } }
+      @media (min-width: 700px) {
+        #about-us .three-columns div div, #about-us .two-columns div div {
+          padding-left: 20px;
+          padding-right: 20px; } }
+      #about-us .three-columns div h2, #about-us .two-columns div h2 {
+        color: #178A27;
+        margin: 13px auto; }
+      #about-us .three-columns div p, #about-us .two-columns div p {
+        line-height: 1.8;
+        margin-bottom: 20px; }
+  #about-us img {
+    width: 100%;
+    height: auto; }
+  #about-us .two-columns {
+    grid-template-columns: 1fr;
+    margin-top: 80px; }
+    @media (min-width: 700px) {
+      #about-us .two-columns {
+        grid-template-columns: 1fr 1fr; } }
+    #about-us .two-columns h2 {
+      color: #333 !important; }
+
+#our-services {
+  margin-top: 80px; }
+  #our-services .our-service {
+    background: url("../img/bg-2.jpg") center center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding: 40px 30px; }
+    #our-services .our-service h1 {
+      font-size: 2rem; }
+      @media (min-width: 700px) {
+        #our-services .our-service h1 {
+          width: 50vw;
+          margin-left: auto;
+          margin-right: auto; } }
+    #our-services .our-service p {
+      font-size: 1.1rem;
+      line-height: 1.8; }
+      @media (min-width: 700px) {
+        #our-services .our-service p {
+          width: 50vw;
+          margin-left: auto;
+          margin-right: auto; } }
+    @media (min-width: 700px) {
+      #our-services .our-service {
+        margin: auto; } }
+  #our-services .four-columns {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 63%;
+    grid-gap: 50px; }
+    @media (min-width: 700px) {
+      #our-services .four-columns {
+        width: 85%;
+        grid-template-columns: 1fr 1fr 1fr 1fr; } }
+    #our-services .four-columns img {
+      width: 100%;
+      height: auto; }
+    #our-services .four-columns div {
+      color: gray;
+      background-color: #f2f2f2;
+      text-align: center; }
+      #our-services .four-columns div div {
+        padding: 10px 20px 20px 20px; }
+        #our-services .four-columns div div h2 {
+          text-align: center;
+          margin: 10px auto; }
+        #our-services .four-columns div div p {
+          margin: 10px auto;
+          text-align: left; }
+        #our-services .four-columns div div a {
+          display: inline-block;
+          margin: 10px auto 0 auto; }
+  #our-services .one-column {
+    margin: 30px auto auto auto;
+    color: gray; }
+    #our-services .one-column img {
+      width: 100%;
+      height: auto; }
+    #our-services .one-column div {
+      background-color: #f2f2f2;
+      padding: 20px 30px; }
+      #our-services .one-column div p {
+        margin: 20px auto; }
+
+#contact-form {
+  background: url("../img/bg-3.jpg") center center;
+  background-size: cover;
+  margin-top: 20px; }
+  #contact-form div {
+    margin: auto;
+    padding: 50px 5px 15px 5px; }
+    @media (min-width: 700px) {
+      #contact-form div {
+        width: 63%; } }
+    #contact-form div h1 {
+      color: #fff;
+      margin: 10px auto 20px auto;
+      text-align: center;
+      font-size: 1.8rem;
+      letter-spacing: 5px; }
+    #contact-form div a {
+      border: 1px solid #fff;
+      background-color: #000;
+      border-radius: 8px; }
+    #contact-form div a:hover {
+      border: 1px solid #000;
+      background-color: #fff;
+      color: #000; }
+    #contact-form div p {
+      background: rgba(242, 242, 242, 0.4) none repeat scroll 0 0;
+      border-radius: 5px;
+      color: #000;
+      font-size: 16px;
+      margin-bottom: 20px;
+      padding: 20px 15px;
+      line-height: 1.6; }
+    #contact-form div input, #contact-form div textarea {
+      background: rgba(242, 242, 242, 0.4) none repeat scroll 0 0;
+      border-radius: 5px;
+      color: #000;
+      padding: 10px 5px;
+      border: none; }
+      @media (min-width: 700px) {
+        #contact-form div input, #contact-form div textarea {
+          padding: 0 5px; } }
+  #contact-form form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px; }
+    @media (min-width: 700px) {
+      #contact-form form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "name message" "email message" "subject message" ". button"; } }
+    @media (min-width: 700px) {
+      #contact-form form .name {
+        grid-area: name; } }
+    @media (min-width: 700px) {
+      #contact-form form .email {
+        grid-area: email; } }
+    @media (min-width: 700px) {
+      #contact-form form .subject {
+        grid-area: subject; } }
+    @media (min-width: 700px) {
+      #contact-form form .message {
+        grid-area: message; } }
+    @media (min-width: 700px) {
+      #contact-form form .button {
+        grid-area: button; } }
+
+footer {
+  padding: 20px;
+  text-align: center; }
+  footer h1 {
+    color: gray;
+    margin: 10px auto; }
+  footer hr {
+    color: gray; }
+  footer p {
+    margin: 30px auto; }
+
+/*# sourceMappingURL=style.css.map */

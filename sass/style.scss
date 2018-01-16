@@ -1,0 +1,312 @@
+@import "var";
+@import "mixins";
+@import "general";
+
+
+nav#desktop {
+    display: none;
+    width: 100vw;
+    padding: 15px 25%;
+    background-color: #333;
+    position: fixed;
+    @include largeScreen {
+        display: block;
+    }
+    div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: 10px;
+        a {
+            text-align: center;
+            text-decoration: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: 1px solid grey;
+            color: #fff;
+            font-size: 1rem;
+            border-radius: 1px;
+            @include transition("all", 250ms);
+        }
+
+        a:hover {
+            background-color: lighten(#333, 7%)!important;
+        }
+    }
+}
+
+#landing-page {
+    background: url("../img/bg-1.jpg") center center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 74px;
+    @media (min-width: 1030px) {
+        min-height: 95vh;
+    }
+    div {
+        justify-self: center;
+        color: #fff;
+        align-self: center;
+        text-align: center;
+        margin: 40%;
+        @include largeScreen {
+            margin: 250px auto;
+        }
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+#about-us {
+    @extend .container;
+    margin: 0 auto 0 auto;
+    .three-columns {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+
+        @include largeScreen {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        div {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 0 2px 15px 2px;
+            color: #333;
+            @include largeScreen {
+                text-align: left;
+            }
+            div {
+                @include largeScreen {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+            h2 {
+                color: #178A27;
+                margin: 13px auto;
+            }
+            p {
+                line-height: 1.8;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .two-columns {
+        @extend .three-columns;
+        grid-template-columns: 1fr;
+        margin-top: 80px;
+        @include largeScreen {
+            grid-template-columns: 1fr 1fr;
+        }
+        h2 {
+            color: #333!important;
+        }
+    }
+}
+
+#our-services {
+    margin-top: 80px;
+    .our-service {
+        background: url("../img/bg-2.jpg") center center;
+        background-attachment: fixed;
+        background-size: cover;
+        text-align: center;
+        color: #fff;
+        padding: 40px 30px;
+        h1 {
+            font-size: 2rem;
+            @include largeScreen {
+                width: 50vw;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            @include largeScreen {
+                width: 50vw;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        @include largeScreen {
+            margin: auto;
+        }
+    }
+
+    .four-columns {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 63%;
+        @include largeScreen {
+           width: 85%;
+           grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        grid-gap: 50px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        div {
+            color: lighten(#333, 30%);
+            background-color: #f2f2f2;
+            text-align: center;
+            div {
+                padding: 10px 20px 20px 20px;
+                h2 {
+                    text-align: center;
+                    margin: 10px auto;
+                }
+                p {
+                    margin: 10px auto;
+                    text-align: left;
+                }
+                a {
+                    display: inline-block;
+                    margin: 10px auto 0 auto;
+                }
+            }
+        }
+    }
+    .one-column {
+        @extend .container;
+        margin: 30px auto auto auto;
+        color: lighten(#333, 30%);
+        img {
+            width: 100%;
+            height: auto;
+        }
+        div {
+            background-color: #f2f2f2;
+            padding: 20px 30px;
+            p {
+                margin: 20px auto;
+            }
+        }
+    }
+}
+
+#contact-form {
+    background: url("../img/bg-3.jpg") center center;
+    background-size: cover;
+    margin-top: 20px;
+    div {
+        @extend .container;
+        @include largeScreen {
+            width: 63%;
+        }
+        margin: auto;
+        padding: 50px 5px 15px 5px;
+        h1 {
+            color: #fff;
+            margin: 10px auto 20px auto;
+            text-align: center;
+            font-size: 1.8rem;
+            letter-spacing: 5px;
+        }
+        a {
+            border: 1px solid #fff;
+            background-color: #000;
+            border-radius: 8px;
+        }
+        & a:hover {
+            border: 1px solid #000;
+            background-color: #fff;
+            color: #000;
+        }
+        p {
+            background: rgba(242, 242, 242, 0.4) none repeat scroll 0 0;
+            border-radius: 5px;
+            color: #000;
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding: 20px 15px;
+            line-height: 1.6;
+        }
+        input, textarea {
+            background: rgba(242, 242, 242, 0.4) none repeat scroll 0 0;
+            border-radius: 5px;
+            color: #000;
+            padding: 10px 5px;
+            border: none;
+            @include largeScreen {
+                padding: 0 5px; 
+            }
+        }
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+
+        @include largeScreen {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "name message"
+            "email message"
+            "subject message"
+            ". button";
+        }
+        .name {
+            @include largeScreen {
+                grid-area: name;
+            }
+        }
+
+        .email {
+            @include largeScreen {
+                grid-area: email;
+            }
+        }
+
+        .subject {
+            @include largeScreen {
+                grid-area: subject;
+            }
+        }
+
+        .message {
+            @include largeScreen {
+                grid-area: message;
+            }
+        }
+
+        .button {
+            @include largeScreen {
+                grid-area: button;
+            }
+        }
+    }
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    h1 {
+        color: lighten(#333, 30%);
+        margin: 10px auto;
+    }
+
+    hr {
+        color: lighten(#333, 30%);
+    }
+
+    p {
+        margin: 30px auto;
+    }
+}
