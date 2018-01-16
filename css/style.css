@@ -82,6 +82,55 @@ nav#desktop {
     nav#desktop div a:hover {
       background-color: #454545 !important; }
 
+img.arrow {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: none; }
+  @media (min-width: 700px) {
+    img.arrow {
+      display: none !important; } }
+
+nav#mobile {
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  padding: 0 10px; }
+  @media (min-width: 700px) {
+    nav#mobile {
+      display: none; } }
+  nav#mobile > div {
+    position: fixed;
+    right: 10px;
+    top: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: .7em;
+    border-radius: 5px;
+    margin-bottom: 5px; }
+  nav#mobile ul {
+    margin-top: 70px;
+    list-style: none;
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+    height: 0;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    transition-property: "height"; }
+    nav#mobile ul li {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #fff; }
+    nav#mobile ul li:hover {
+      background-color: #454545; }
+    nav#mobile ul li:last-child {
+      border-bottom: none; }
+    nav#mobile ul a {
+      color: #fff;
+      text-decoration: none; }
+
 #landing-page {
   background: url("../img/bg-1.jpg") center center;
   background-attachment: fixed;
